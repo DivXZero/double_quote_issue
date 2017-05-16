@@ -1,0 +1,15 @@
+.div{ data: { filter: @variables[:filter] } }
+
+.div{ data: { filter: @variables } }
+
+.div{ data: { filter: "#{@variables[:filter]}" } }
+
+.div{ data: { filter: "#{@variables}" } }
+
+.div{ data: { filter: "#{@variables}".html_safe } }
+
+= content_tag :div, nil, data: { filter: @variables }
+
+= content_tag :div, nil, data: { filter: @variables[:filter] }
+
+= content_tag :div, nil, data: { filter: "#{@variables[:filter]}".html_safe }
